@@ -1,0 +1,9 @@
+COSObjectKey.COSObjectKey( COSObject object );0;1;3
+COSObjectKey.COSObjectKey( long num , int gen );0;1;4
+COSObjectKey.compareTo( COSObjectKey other );9;5;25
+COSObjectKey.equals( Object obj );9;4;6
+COSObjectKey.fixGeneration( int genNumber );1;1;3
+COSObjectKey.getGeneration( );2;1;3
+COSObjectKey.getNumber( );2;1;3
+COSObjectKey.hashCode( );4;1;3
+COSObjectKey.toString( );4;1;3

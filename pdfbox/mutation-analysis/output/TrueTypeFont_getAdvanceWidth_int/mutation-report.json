@@ -1,0 +1,72 @@
+{
+    "mut": "TrueTypeFont_getAdvanceWidth_int",
+    "CUT": "org.apache.pdfbox.fontbox.ttf.TrueTypeFont",
+    "mutant-file": "./TrueTypeFont.java/128.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "TTFSubsetterTest#testNonEmptySubset",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.473 s - in org.apache.fontbox.ttf.TTFSubsetterTest",
+            "result-parameterized": "Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.932 s - in org.apache.pdfbox.fontbox.ttf.TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testNonEmptySubset"
+        },
+        {
+            "test": "TTFSubsetterTest#testPDFBox3379",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.486 s - in org.apache.fontbox.ttf.TTFSubsetterTest",
+            "result-parameterized": "Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.185 s - in org.apache.pdfbox.fontbox.ttf.TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testPDFBox3379"
+        }
+    ]
+},
+{
+    "mut": "TrueTypeFont_getAdvanceWidth_int",
+    "CUT": "org.apache.pdfbox.fontbox.ttf.TrueTypeFont",
+    "mutant-file": "./TrueTypeFont.java/164.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "TTFSubsetterTest#testNonEmptySubset",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.609 s - in org.apache.fontbox.ttf.TTFSubsetterTest",
+            "result-parameterized": "Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.97 s - in org.apache.pdfbox.fontbox.ttf.TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testNonEmptySubset"
+        },
+        {
+            "test": "TTFSubsetterTest#testPDFBox3379",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.61 s - in org.apache.fontbox.ttf.TTFSubsetterTest",
+            "result-parameterized": "Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.075 s - in org.apache.pdfbox.fontbox.ttf.TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testPDFBox3379"
+        }
+    ]
+},
+{
+    "mut": "TrueTypeFont_getAdvanceWidth_int",
+    "CUT": "org.apache.pdfbox.fontbox.ttf.TrueTypeFont",
+    "mutant-file": "./TrueTypeFont.java/165.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "TTFSubsetterTest#testNonEmptySubset",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.512 s - in org.apache.fontbox.ttf.TTFSubsetterTest",
+            "result-parameterized": "Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.9 s - in org.apache.pdfbox.fontbox.ttf.TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testNonEmptySubset"
+        },
+        {
+            "test": "TTFSubsetterTest#testPDFBox3379",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.466 s - in org.apache.fontbox.ttf.TTFSubsetterTest",
+            "result-parameterized": "Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.097 s - in org.apache.pdfbox.fontbox.ttf.TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testPDFBox3379"
+        }
+    ]
+},
+{
+    "mut": "TrueTypeFont_getAdvanceWidth_int",
+    "CUT": "org.apache.pdfbox.fontbox.ttf.TrueTypeFont",
+    "mutant-file": "./TrueTypeFont.java/28.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "TTFSubsetterTest#testNonEmptySubset",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.593 s - in org.apache.fontbox.ttf.TTFSubsetterTest",
+            "result-parameterized": "Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.907 s - in org.apache.pdfbox.fontbox.ttf.TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testNonEmptySubset"
+        },
+        {
+            "test": "TTFSubsetterTest#testPDFBox3379",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.503 s - in org.apache.fontbox.ttf.TTFSubsetterTest",
+            "result-parameterized": "Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.935 s - in org.apache.pdfbox.fontbox.ttf.TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testPDFBox3379"
+        }
+    ]
+},

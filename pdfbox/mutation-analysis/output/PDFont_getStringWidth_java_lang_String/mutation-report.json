@@ -1,0 +1,78 @@
+{
+    "mut": "PDFont_getStringWidth_java_lang_String",
+    "CUT": "org.apache.pdfbox.pdmodel.font.PDFont",
+    "mutant-file": "./PDFont.java/126.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "PDFontTest#testSoftHyphen",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.771 s - in org.apache.pdfbox.pdmodel.font.PDFontTest",
+            "result-parameterized": "Tests run: 2244, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 62.705 s - in org.apache.pdfbox.pdfbox.pdmodel.font.TestProzeGen_PDFont_getStringWidth_java_lang_String_testSoftHyphen"
+        }
+    ]
+},
+{
+    "mut": "PDFont_getStringWidth_java_lang_String",
+    "CUT": "org.apache.pdfbox.pdmodel.font.PDFont",
+    "mutant-file": "./PDFont.java/129.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "PDFontTest#testSoftHyphen",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.537 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.PDFontTest",
+            "result-parameterized": "Tests run: 2244, Failures: 0, Errors: 2244, Skipped: 0, Time elapsed: 37.309 s <<< FAILURE! - in org.apache.pdfbox.pdfbox.pdmodel.font.TestProzeGen_PDFont_getStringWidth_java_lang_String_testSoftHyphen"
+        }
+    ]
+},
+{
+    "mut": "PDFont_getStringWidth_java_lang_String",
+    "CUT": "org.apache.pdfbox.pdmodel.font.PDFont",
+    "mutant-file": "./PDFont.java/37.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "PDFontTest#testSoftHyphen",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.993 s - in org.apache.pdfbox.pdmodel.font.PDFontTest",
+            "result-parameterized": "Tests run: 2244, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.045 s - in org.apache.pdfbox.pdfbox.pdmodel.font.TestProzeGen_PDFont_getStringWidth_java_lang_String_testSoftHyphen"
+        }
+    ]
+},
+{
+    "mut": "PDFont_getStringWidth_java_lang_String",
+    "CUT": "org.apache.pdfbox.pdmodel.font.PDFont",
+    "mutant-file": "./PDFont.java/38.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "PDFontTest#testSoftHyphen",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.744 s - in org.apache.pdfbox.pdmodel.font.PDFontTest",
+            "result-parameterized": "Tests run: 2244, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.811 s - in org.apache.pdfbox.pdfbox.pdmodel.font.TestProzeGen_PDFont_getStringWidth_java_lang_String_testSoftHyphen"
+        }
+    ]
+},
+{
+    "mut": "PDFont_getStringWidth_java_lang_String",
+    "CUT": "org.apache.pdfbox.pdmodel.font.PDFont",
+    "mutant-file": "./PDFont.java/68.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "PDFontTest#testSoftHyphen",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.77 s - in org.apache.pdfbox.pdmodel.font.PDFontTest",
+            "result-parameterized": "Tests run: 2244, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.871 s - in org.apache.pdfbox.pdfbox.pdmodel.font.TestProzeGen_PDFont_getStringWidth_java_lang_String_testSoftHyphen"
+        }
+    ]
+},
+{
+    "mut": "PDFont_getStringWidth_java_lang_String",
+    "CUT": "org.apache.pdfbox.pdmodel.font.PDFont",
+    "mutant-file": "./PDFont.java/94.java",
+    "mutant-within-mut": true,
+    "tests": [
+        {
+            "test": "PDFontTest#testSoftHyphen",
+            "result_original": "Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.008 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.PDFontTest",
+            "result-parameterized": "Tests run: 2244, Failures: 0, Errors: 2244, Skipped: 0, Time elapsed: 39.102 s <<< FAILURE! - in org.apache.pdfbox.pdfbox.pdmodel.font.TestProzeGen_PDFont_getStringWidth_java_lang_String_testSoftHyphen"
+        }
+    ]
+},

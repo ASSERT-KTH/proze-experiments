@@ -1,0 +1,51 @@
+***not in a method***;4;1;0
+TrueTypeFont.TrueTypeFont( TTFDataStream fontData );0;1;3
+TrueTypeFont.addTable( TTFTable table );2;1;3
+TrueTypeFont.close( );1;1;3
+TrueTypeFont.disableGsubFeature( String featureTag );2;1;3
+TrueTypeFont.enableGsubFeature( String featureTag );2;1;3
+TrueTypeFont.enableVerticalSubstitutions( );1;1;4
+TrueTypeFont.finalize( );1;1;4
+TrueTypeFont.getAdvanceHeight( int gid );4;2;11
+TrueTypeFont.getAdvanceWidth( int gid );4;2;11
+TrueTypeFont.getCmap( );2;1;3
+TrueTypeFont.getFontBBox( );8;1;9
+TrueTypeFont.getFontMatrix( );5;1;4
+TrueTypeFont.getGlyph( );2;1;3
+TrueTypeFont.getGsub( );2;1;3
+TrueTypeFont.getHeader( );2;1;3
+TrueTypeFont.getHorizontalHeader( );2;1;3
+TrueTypeFont.getHorizontalMetrics( );2;1;3
+TrueTypeFont.getIndexToLocation( );2;1;3
+TrueTypeFont.getKerning( );2;1;3
+TrueTypeFont.getMaximumProfile( );2;1;3
+TrueTypeFont.getName( );6;2;10
+TrueTypeFont.getNaming( );2;1;3
+TrueTypeFont.getNumberOfGlyphs( );6;3;15
+TrueTypeFont.getOS2Windows( );2;1;3
+TrueTypeFont.getOriginalData( );2;1;3
+TrueTypeFont.getOriginalDataSize( );2;1;3
+TrueTypeFont.getPath( String name );7;2;12
+TrueTypeFont.getPostScript( );2;1;3
+TrueTypeFont.getTable( String tag );7;3;8
+TrueTypeFont.getTableBytes( TTFTable table );3;1;7
+TrueTypeFont.getTableMap( );2;1;3
+TrueTypeFont.getTables( );2;1;3
+TrueTypeFont.getUnicodeCmap( );2;1;3
+TrueTypeFont.getUnicodeCmap( boolean isStrict );2;1;3
+TrueTypeFont.getUnicodeCmapImpl( boolean isStrict );18;10;48
+TrueTypeFont.getUnicodeCmapLookup( );2;1;3
+TrueTypeFont.getUnicodeCmapLookup( boolean isStrict );7;3;13
+TrueTypeFont.getUnitsPerEm( );6;3;15
+TrueTypeFont.getVersion( );2;1;3
+TrueTypeFont.getVerticalHeader( );2;1;3
+TrueTypeFont.getVerticalMetrics( );2;1;3
+TrueTypeFont.getVerticalOrigin( );2;1;3
+TrueTypeFont.getWidth( String name );3;1;4
+TrueTypeFont.hasGlyph( String name );4;1;3
+TrueTypeFont.nameToGID( String name );13;6;18
+TrueTypeFont.parseUniName( String name );17;8;29
+TrueTypeFont.readPostScriptNames( );12;5;18
+TrueTypeFont.readTable( TTFTable table );2;1;9
+TrueTypeFont.setVersion( float versionValue );1;1;3
+TrueTypeFont.toString( );7;3;17

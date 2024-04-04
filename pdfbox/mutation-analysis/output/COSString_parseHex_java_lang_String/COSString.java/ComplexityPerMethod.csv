@@ -1,0 +1,14 @@
+COSString.COSString( String text );2;4;23
+COSString.COSString( byte [ ] bytes );0;1;3
+COSString.accept( ICOSVisitor visitor );3;1;3
+COSString.equals( Object obj );5;3;9
+COSString.getASCII( );4;1;3
+COSString.getBytes( );2;1;3
+COSString.getForceHexForm( );2;1;3
+COSString.getString( );20;6;14
+COSString.hashCode( );3;2;4
+COSString.parseHex( String hex );12;5;29
+COSString.setForceHexForm( boolean value );1;1;3
+COSString.setValue( byte [ ] value );1;1;3
+COSString.toHexString( );3;1;3
+COSString.toString( );3;1;3

@@ -1,0 +1,301 @@
+[LOG] Initiating analysis at 2024-03-30 16:56:39.473866
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with COSObjectKey_init_long_int
+[LOG] Generating mutants for its parent COSObjectKey.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSDocument.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  112
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 12
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 17
+----> NullifyObjectInitialization : 11
+----> RemoveNullCheck : 11
+----> ConditionalOperatorReplacement : 3
+----> RemoveMethod : 43
+----> RelationalOperatorReplacement : 13
+
+(2/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSStream.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  80
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 16
+----> NullifyObjectInitialization : 16
+----> RemoveNullCheck : 6
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 27
+----> RelationalOperatorReplacement : 7
+----> ArithmeticOperatorReplacementShortcut : 1
+
+(3/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSObject.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  27
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 5
+----> RemoveNullCheck : 1
+----> RemoveMethod : 16
+----> RelationalOperatorReplacement : 1
+
+(4/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/UnmodifiableCOSDictionary.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  108
+----> NullifyInputVariable : 48
+----> NullifyObjectInitialization : 30
+----> RemoveMethod : 30
+
+(5/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSFloat.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  52
+----> ArithmeticOperatorReplacementBinary : 2
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 4
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 5
+----> ConditionalOperatorReplacement : 6
+----> RemoveMethod : 19
+----> RelationalOperatorReplacement : 9
+
+(6/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSObjectKey.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  31
+----> ArithmeticOperatorReplacementBinary : 2
+----> NullifyInputVariable : 2
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 1
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 2
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 13
+----> RelationalOperatorReplacement : 7
+
+(7/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSNull.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+
+(8/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSOutputStream.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  21
+----> ArithmeticOperatorReplacementBinary : 1
+----> NullifyObjectInitialization : 2
+----> RemoveNullCheck : 5
+----> RemoveMethod : 5
+----> RelationalOperatorReplacement : 7
+----> ArithmeticOperatorReplacementShortcut : 1
+
+(9/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/PDFDocEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  26
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 3
+----> LogicalOperatorReplacement : 2
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 7
+----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementShortcut : 1
+
+(10/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSString.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  61
+----> ArithmeticOperatorReplacementBinary : 6
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 8
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 7
+----> LogicalOperatorReplacement : 4
+----> ConditionalOperatorReplacement : 3
+----> RemoveMethod : 20
+----> RelationalOperatorReplacement : 8
+
+(11/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSInputStream.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  31
+----> ArithmeticOperatorReplacementBinary : 1
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 9
+----> NullifyReturnValue : 4
+----> NullifyObjectInitialization : 7
+----> RemoveNullCheck : 1
+----> RemoveMethod : 4
+----> RelationalOperatorReplacement : 3
+----> ArithmeticOperatorReplacementShortcut : 1
+
+(12/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSInteger.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  45
+----> ArithmeticOperatorReplacementBinary : 3
+----> NullifyInputVariable : 3
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 5
+----> NullifyObjectInitialization : 4
+----> LogicalOperatorReplacement : 1
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 2
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 20
+----> RelationalOperatorReplacement : 4
+
+(13/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSArray.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  112
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 20
+----> ArithmeticOperatorReplacementUnary : 3
+----> NullifyReturnValue : 11
+----> NullifyObjectInitialization : 4
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 53
+----> RelationalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementShortcut : 4
+
+(14/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSBase.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  5
+----> NullifyReturnValue : 1
+----> RemoveMethod : 4
+
+(15/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSName.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  597
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 4
+----> NullifyObjectInitialization : 537
+----> LogicalOperatorReplacement : 1
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 14
+----> RemoveMethod : 16
+----> RelationalOperatorReplacement : 17
+
+(16/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSDictionary.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  421
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 141
+----> ArithmeticOperatorReplacementUnary : 8
+----> NullifyReturnValue : 56
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 10
+----> LogicalOperatorReplacement : 2
+----> RemoveNullCheck : 23
+----> ConditionalOperatorReplacement : 8
+----> RemoveMethod : 144
+----> RelationalOperatorReplacement : 26
+----> ArithmeticOperatorReplacementShortcut : 1
+
+(17/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSBoolean.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  19
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 5
+----> NullifyObjectInitialization : 2
+----> RemoveMethod : 9
+
+(18/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/ICOSVisitor.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(19/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSNumber.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  30
+----> ArithmeticOperatorReplacementBinary : 1
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 6
+----> NullifyObjectInitialization : 3
+----> ConditionalOperatorReplacement : 4
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 9
+----> ArithmeticOperatorReplacementShortcut : 1
+
+(20/20) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSUpdateInfo.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+Total mutations found:  1787
+--> ArithmeticOperatorReplacementBinary: 16
+--> ConditionalOperatorDeletion: 9
+--> NullifyInputVariable: 263
+--> ArithmeticOperatorReplacementUnary: 17
+--> NullifyReturnValue: 145
+--> AssignmentOperatorReplacementShortcut: 2
+--> NullifyObjectInitialization: 642
+--> LogicalOperatorReplacement: 10
+--> RemoveNullCheck: 56
+--> ConditionalOperatorReplacement: 48
+--> ShiftOperatorReplacement: 2
+--> RemoveMethod: 437
+--> RelationalOperatorReplacement: 130
+--> ArithmeticOperatorReplacementShortcut: 10
+
+
+---------------------------------------------------
+[LOG] Copying mutants of COSObjectKey.java
+---------------------------------------------------
+[LOG] Generated 31 mutants
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/fakir/proze-experiments/mutation-analysis/output/COSObjectKey_init_long_int/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/fakir/proze-experiments/mutation-analysis/COSObjectKey.java', '/home/dee/dev/fakir/proze-experiments/mutation-analysis/output/COSObjectKey_init_long_int/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2024-03-30 16:57:17.018116
+====== END OF THE LINE ======

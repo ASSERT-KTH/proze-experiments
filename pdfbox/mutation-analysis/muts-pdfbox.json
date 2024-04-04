@@ -1,0 +1,198 @@
+[
+	{
+    "mut": "TrueTypeFont_getAdvanceWidth_int",
+    "mut-start-line": 422,
+    "mut-end-line": 434,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+    "parent-file": "TrueTypeFont.java",
+    "parent-fqn": "org.apache.pdfbox.fontbox.ttf.TrueTypeFont",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+        "original-test": "TTFSubsetterTest#testNonEmptySubset",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testNonEmptySubset"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+        "original-test": "TTFSubsetterTest#testPDFBox3379",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_TrueTypeFont_getAdvanceWidth_int_testPDFBox3379"
+      }
+    ]
+  },
+  {
+    "mut": "TrueTypeFont_nameToGID_java_lang_String",
+    "mut-start-line": 612,
+    "mut-end-line": 634,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+    "parent-file": "TrueTypeFont.java",
+    "parent-fqn": "org.apache.pdfbox.fontbox.ttf.TrueTypeFont",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+        "original-test": "TTFSubsetterTest#testEmptySubset",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_TrueTypeFont_nameToGID_java_lang_String_testEmptySubset"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+        "original-test": "TTFSubsetterTest#testEmptySubset2",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_TrueTypeFont_nameToGID_java_lang_String_testEmptySubset2"
+      }
+    ]
+  },
+  {
+    "mut": "TTFParser_init_boolean",
+    "mut-start-line": 46,
+    "mut-end-line": 49,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+    "parent-file": "TTFParser.java",
+    "parent-fqn": "org.apache.fontbox.ttf.TTFParser",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+        "original-test": "TTFSubsetterTest#testEmptySubset",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_TTFParser_init_testEmptySubset"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+        "original-test": "TTFSubsetterTest#testNonEmptySubset",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_TTFParser_init_testNonEmptySubset"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/",
+        "original-test": "TTFSubsetterTest#testPDFBox3757",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_TTFParser_init_testPDFBox3757"
+      }
+    ]
+  },
+  {
+    "mut": "COSObjectKey_init_long_int",
+    "mut-start-line": 46,
+    "mut-end-line": 50,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+    "parent-file": "COSObjectKey.java",
+    "parent-fqn": "org.apache.pdfbox.cos.COSObjectKey",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "COSObjectKeyTest#compareToInputNotNullOutputZero",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_COSObjectKey_init_compareToInputNotNullOutputZero"
+      }
+    ]
+  },
+  {
+    "mut": "COSString_parseHex_java_lang_String",
+    "mut-start-line": 109,
+    "mut-end-line": 142,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+    "parent-file": "COSString.java",
+    "parent-fqn": "org.apache.pdfbox.cos.COSString",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "PDFDocEncodingTest#testPDFBox3864",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_COSString_parseHex_java_lang_String_testPDFBox3864"
+      }
+    ]
+  },
+  {
+    "mut": "PDFMergerUtility_setDestinationFileName_java_lang_String",
+    "mut-start-line": 207,
+    "mut-end-line": 210,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+    "parent-file": "PDFMergerUtility.java",
+    "parent-fqn": "org.apache.pdfbox.multipdf.PDFMergerUtility",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/multipdf/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "MergeAcroFormsTest#testAnnotsEntry",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDFMergerUtility_setDestinationFileName_java_lang_String_testAnnotsEntry"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "MergeAcroFormsTest#testAPEntry",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDFMergerUtility_setDestinationFileName_java_lang_String_testAPEntry"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "MergeAcroFormsTest#testJoinFieldsMerge_TextFieldsOnly_SameMerged",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDFMergerUtility_setDestinationFileName_java_lang_String_testJoinFieldsMerge_TextFieldsOnly_SameMerged"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "MergeAcroFormsTest#testLegacyModeMerge",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDFMergerUtility_setDestinationFileName_java_lang_String_testLegacyModeMerge"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "MergeAnnotationsTest#testLinkAnnotations",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDFMergerUtility_setDestinationFileName_java_lang_String_testLinkAnnotations"
+      }
+    ]
+  },
+  {
+    "mut": "PDDocument_save_java_lang_String",
+    "mut-start-line": 1324,
+    "mut-end-line": 1327,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+    "parent-file": "PDDocument.java",
+    "parent-fqn": "org.apache.pdfbox.pdmodel.PDDocument",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "COSArrayListTest#removeIndirectObject",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDDocument_save_java_lang_String_removeIndirectObject"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "COSArrayListTest#removeSingleDirectObject",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDDocument_save_java_lang_String_removeSingleDirectObject"
+      },
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "COSArrayListTest#removeSingleIndirectObject",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDDocument_save_java_lang_String_removeSingleIndirectObject"
+      }
+    ]
+  },
+    {
+    "mut": "PDFont_getStringWidth_java_lang_String",
+    "mut-start-line": 362,
+    "mut-end-line": 375,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+    "parent-file": "PDFont.java",
+    "parent-fqn": "org.apache.pdfbox.pdmodel.font.PDFont",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/pdfbox/",
+        "original-test": "PDFontTest#testSoftHyphen",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_PDFont_getStringWidth_java_lang_String_testSoftHyphen"
+      }
+    ]
+  }
+]

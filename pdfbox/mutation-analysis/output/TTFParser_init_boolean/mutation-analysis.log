@@ -1,0 +1,559 @@
+[LOG] Initiating analysis at 2024-03-30 16:56:02.228106
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with TTFParser_init_boolean
+[LOG] Generating mutants for its parent TTFParser.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/OTFParser.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  30
+----> NullifyInputVariable : 7
+----> NullifyReturnValue : 8
+----> NullifyObjectInitialization : 3
+----> ConditionalOperatorReplacement : 4
+----> RemoveMethod : 8
+
+(2/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyphDescription.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(3/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/OpenTypeFont.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  20
+----> RelationalOperatorReplacement : 1
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 2
+----> ConditionalOperatorReplacement : 4
+----> RemoveMethod : 8
+
+(4/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/TrueTypeFont.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  199
+----> RelationalOperatorReplacement : 33
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 10
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 11
+----> ArithmeticOperatorReplacementUnary : 8
+----> NullifyReturnValue : 35
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 10
+----> RemoveNullCheck : 20
+----> ConditionalOperatorReplacement : 6
+----> RemoveMethod : 62
+
+(5/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyphRenderer.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  55
+----> RelationalOperatorReplacement : 7
+----> ArithmeticOperatorReplacementShortcut : 6
+----> ArithmeticOperatorReplacementBinary : 7
+----> NullifyInputVariable : 11
+----> ArithmeticOperatorReplacementUnary : 3
+----> NullifyReturnValue : 5
+----> NullifyObjectInitialization : 4
+----> LogicalOperatorReplacement : 1
+----> RemoveMethod : 11
+
+(6/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/BufferedRandomAccessFile.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  39
+----> RelationalOperatorReplacement : 9
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 7
+----> ArithmeticOperatorReplacementUnary : 3
+----> AssignmentOperatorReplacementShortcut : 6
+----> LogicalOperatorReplacement : 1
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 10
+
+(7/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/VerticalHeaderTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  37
+----> NullifyInputVariable : 2
+----> RemoveMethod : 35
+
+(8/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/MaximumProfileTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  48
+----> NullifyInputVariable : 2
+----> RemoveMethod : 46
+
+(9/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyphData.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  31
+----> RelationalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementBinary : 1
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 6
+----> RemoveMethod : 17
+
+(10/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyfCompositeDescript.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  79
+----> RelationalOperatorReplacement : 17
+----> ArithmeticOperatorReplacementBinary : 11
+----> ConditionalOperatorDeletion : 2
+----> ArithmeticOperatorReplacementUnary : 3
+----> NullifyReturnValue : 4
+----> AssignmentOperatorReplacementShortcut : 4
+----> NullifyObjectInitialization : 3
+----> LogicalOperatorReplacement : 2
+----> RemoveNullCheck : 9
+----> ConditionalOperatorReplacement : 4
+----> RemoveMethod : 20
+
+(11/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/HorizontalMetricsTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  24
+----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 3
+----> NullifyInputVariable : 2
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 1
+----> RemoveNullCheck : 1
+----> RemoveMethod : 5
+
+(12/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/HorizontalHeaderTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  54
+----> NullifyInputVariable : 2
+----> RemoveMethod : 52
+
+(13/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/TrueTypeCollection.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  23
+----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementShortcut : 3
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 6
+----> RemoveMethod : 4
+
+(14/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/TTFTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  19
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 1
+----> RemoveMethod : 15
+
+(15/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/MemoryTTFDataStream.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  61
+----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 9
+----> ArithmeticOperatorReplacementUnary : 3
+----> NullifyReturnValue : 1
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 6
+----> LogicalOperatorReplacement : 6
+----> ConditionalOperatorReplacement : 1
+----> ShiftOperatorReplacement : 6
+----> RemoveMethod : 19
+
+(16/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/WGL4Names.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> RelationalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 1
+
+(17/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/NamingTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  72
+----> RelationalOperatorReplacement : 19
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 6
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 12
+----> NullifyObjectInitialization : 6
+----> RemoveNullCheck : 11
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 12
+
+(18/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/SubstitutingCmapLookup.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  4
+----> NullifyReturnValue : 1
+----> RemoveMethod : 3
+
+(19/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/DigitalSignatureTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(20/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/CFFTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 2
+----> RemoveMethod : 4
+
+(21/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/PostScriptTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  81
+----> RelationalOperatorReplacement : 22
+----> ArithmeticOperatorReplacementShortcut : 6
+----> ArithmeticOperatorReplacementBinary : 7
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 3
+----> RemoveNullCheck : 2
+----> ConditionalOperatorReplacement : 5
+----> RemoveMethod : 33
+
+(22/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/VerticalOriginTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  10
+----> RelationalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementShortcut : 1
+----> NullifyInputVariable : 2
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 5
+
+(23/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/TTCDataStream.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  18
+----> NullifyReturnValue : 1
+----> RemoveMethod : 17
+
+(24/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyphSubstitutionTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  236
+----> RelationalOperatorReplacement : 44
+----> ArithmeticOperatorReplacementShortcut : 15
+----> ArithmeticOperatorReplacementBinary : 14
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 26
+----> ArithmeticOperatorReplacementUnary : 5
+----> NullifyReturnValue : 31
+----> NullifyObjectInitialization : 21
+----> LogicalOperatorReplacement : 1
+----> RemoveNullCheck : 8
+----> ConditionalOperatorReplacement : 10
+----> RemoveMethod : 60
+
+(25/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/OpenTypeScript.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  44
+----> RelationalOperatorReplacement : 13
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 3
+----> NullifyInputVariable : 1
+----> ArithmeticOperatorReplacementUnary : 4
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 7
+----> RemoveNullCheck : 2
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 8
+
+(26/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/TTFDataStream.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  62
+----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 7
+----> NullifyInputVariable : 2
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 5
+----> AssignmentOperatorReplacementShortcut : 3
+----> NullifyObjectInitialization : 6
+----> ConditionalOperatorReplacement : 1
+----> ShiftOperatorReplacement : 3
+----> RemoveMethod : 23
+
+(27/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyphTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  52
+----> RelationalOperatorReplacement : 17
+----> ArithmeticOperatorReplacementShortcut : 3
+----> ArithmeticOperatorReplacementBinary : 4
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 5
+----> NullifyObjectInitialization : 2
+----> RemoveNullCheck : 8
+----> ConditionalOperatorReplacement : 5
+----> RemoveMethod : 5
+
+(28/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/OS2WindowsMetricsTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  113
+----> RelationalOperatorReplacement : 2
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 1
+----> RemoveMethod : 107
+
+(29/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyfSimpleDescript.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  56
+----> RelationalOperatorReplacement : 15
+----> ArithmeticOperatorReplacementShortcut : 4
+----> ArithmeticOperatorReplacementBinary : 4
+----> NullifyInputVariable : 2
+----> ArithmeticOperatorReplacementUnary : 2
+----> AssignmentOperatorReplacementShortcut : 7
+----> LogicalOperatorReplacement : 7
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 14
+
+(30/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyfDescript.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  7
+----> NullifyInputVariable : 1
+----> RemoveMethod : 6
+
+(31/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/CmapLookup.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(32/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/IndexToLocationTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  17
+----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 3
+----> NullifyInputVariable : 2
+----> NullifyObjectInitialization : 2
+----> RemoveNullCheck : 1
+----> RemoveMethod : 4
+
+(33/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/GlyfCompositeComp.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  53
+----> RelationalOperatorReplacement : 5
+----> ArithmeticOperatorReplacementBinary : 13
+----> LogicalOperatorReplacement : 5
+----> RemoveMethod : 30
+
+(34/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/HeaderTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  56
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 2
+----> RemoveMethod : 50
+
+(35/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/CmapSubtable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  264
+----> RelationalOperatorReplacement : 76
+----> ArithmeticOperatorReplacementShortcut : 14
+----> ArithmeticOperatorReplacementBinary : 50
+----> NullifyInputVariable : 12
+----> ArithmeticOperatorReplacementUnary : 5
+----> NullifyReturnValue : 6
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 27
+----> LogicalOperatorReplacement : 5
+----> RemoveNullCheck : 4
+----> ConditionalOperatorReplacement : 22
+----> ShiftOperatorReplacement : 6
+----> RemoveMethod : 36
+
+(36/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/KerningSubtable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  69
+----> RelationalOperatorReplacement : 22
+----> ArithmeticOperatorReplacementShortcut : 3
+----> ArithmeticOperatorReplacementBinary : 2
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 6
+----> ArithmeticOperatorReplacementUnary : 3
+----> NullifyObjectInitialization : 3
+----> LogicalOperatorReplacement : 1
+----> RemoveNullCheck : 4
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 22
+
+(37/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/RAFDataStream.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  23
+----> RelationalOperatorReplacement : 1
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 3
+----> RemoveNullCheck : 1
+----> RemoveMethod : 17
+
+(38/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/VerticalMetricsTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  24
+----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 3
+----> NullifyInputVariable : 2
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 1
+----> RemoveNullCheck : 1
+----> RemoveMethod : 5
+
+(39/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/TTFSubsetter.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  411
+----> RelationalOperatorReplacement : 68
+----> ArithmeticOperatorReplacementShortcut : 17
+----> ArithmeticOperatorReplacementBinary : 85
+----> ConditionalOperatorDeletion : 10
+----> NullifyInputVariable : 18
+----> ArithmeticOperatorReplacementUnary : 4
+----> NullifyReturnValue : 1
+----> AssignmentOperatorReplacementShortcut : 24
+----> NullifyObjectInitialization : 28
+----> LogicalOperatorReplacement : 38
+----> RemoveNullCheck : 19
+----> ConditionalOperatorReplacement : 26
+----> ShiftOperatorReplacement : 24
+----> RemoveMethod : 49
+
+(40/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/KerningTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  19
+----> RelationalOperatorReplacement : 6
+----> ArithmeticOperatorReplacementShortcut : 1
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 1
+----> LogicalOperatorReplacement : 1
+----> RemoveNullCheck : 1
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 3
+
+(41/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/OTLTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(42/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/CmapTable.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  18
+----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementShortcut : 2
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 4
+
+(43/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/TTFParser.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  97
+----> RelationalOperatorReplacement : 12
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ConditionalOperatorDeletion : 7
+----> NullifyInputVariable : 11
+----> NullifyReturnValue : 9
+----> NullifyObjectInitialization : 31
+----> RemoveNullCheck : 10
+----> ConditionalOperatorReplacement : 5
+----> RemoveMethod : 11
+
+(44/44) Source file:  /home/dee/dev/fakir/proze-experiments/pdfbox/fontbox/src/main/java/org/apache/fontbox/ttf/NameRecord.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  29
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 2
+----> RemoveMethod : 24
+
+Total mutations found:  2566
+--> RelationalOperatorReplacement: 436
+--> ArithmeticOperatorReplacementShortcut: 90
+--> ArithmeticOperatorReplacementBinary: 249
+--> ConditionalOperatorDeletion: 26
+--> NullifyInputVariable: 156
+--> ArithmeticOperatorReplacementUnary: 45
+--> NullifyReturnValue: 153
+--> AssignmentOperatorReplacementShortcut: 51
+--> NullifyObjectInitialization: 184
+--> LogicalOperatorReplacement: 68
+--> RemoveNullCheck: 102
+--> ConditionalOperatorReplacement: 101
+--> ShiftOperatorReplacement: 41
+--> RemoveMethod: 864
+
+
+---------------------------------------------------
+[LOG] Copying mutants of TTFParser.java
+---------------------------------------------------
+[LOG] Generated 97 mutants
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/fakir/proze-experiments/mutation-analysis/output/TTFParser_init_boolean/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/fakir/proze-experiments/mutation-analysis/TTFParser.java', '/home/dee/dev/fakir/proze-experiments/mutation-analysis/output/TTFParser_init_boolean/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2024-03-30 16:56:39.469751
+====== END OF THE LINE ======

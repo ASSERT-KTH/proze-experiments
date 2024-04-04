@@ -1,0 +1,19 @@
+[
+	{
+    "mut": "",
+    "mut-start-line": 0,
+    "mut-end-line": 0,
+    "parent-module-path": "/home/dee/dev/fakir/proze-experiments/project/module/",
+    "parent-file": "ParentClass.java",
+    "parent-fqn": "fully.qualified.name.of.ParentClass",
+    "parent-path": "/home/dee/dev/fakir/proze-experiments/project/module/src/main/java/fully/qualified/name/of/",
+    "tests": [
+      {
+        "original-test-module-path": "/home/dee/dev/fakir/proze-experiments/project/module/",
+        "original-test": "TestClass#testMethod",
+        "param-test-module-path": "/home/dee/dev/fakir/proze-experiments/pdfbox/proze-tests-mutation/",
+        "param-test-class": "TestProzeGen_ParentClass_mut_param_types_testMethod"
+      }
+    ]
+  },
+]
