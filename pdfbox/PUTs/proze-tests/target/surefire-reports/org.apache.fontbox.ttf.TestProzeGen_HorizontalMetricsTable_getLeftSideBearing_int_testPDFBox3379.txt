@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.fontbox.ttf.TestProzeGen_HorizontalMetricsTable_getLeftSideBearing_int_testPDFBox3379
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in org.apache.fontbox.ttf.TestProzeGen_HorizontalMetricsTable_getLeftSideBearing_int_testPDFBox3379
