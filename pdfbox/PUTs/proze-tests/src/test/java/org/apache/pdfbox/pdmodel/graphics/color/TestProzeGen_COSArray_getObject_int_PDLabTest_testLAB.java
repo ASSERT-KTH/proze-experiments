@@ -1,0 +1,1609 @@
+/* Copyright 2014 The Apache Software Foundation.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+ */
+package org.apache.pdfbox.pdmodel.graphics.color;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ *
+ * @author Tilman Hausherr
+ */
+// public class PDLabTest extends TestCase
+public class TestProzeGen_COSArray_getObject_int_PDLabTest_testLAB {
+    /**
+     * This test checks that getting default values do not alter the object,
+     * and checks getters and setters.
+     */
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        assertEquals("Lab", pdLab.getName());
+        assertEquals(3, pdLab.getNumberOfComponents());
+        assertNotNull(pdLab.getInitialColor());
+        assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        assertEquals(0, dict.size(), "read operations should not change the size of /Lab objects");
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_1(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_2(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_3(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_4(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_5(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_6(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_7(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_8(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_9(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_10(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_11(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_12(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_13(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_14(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_15(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        assertEquals(0, dict.size(), "read operations should not change the size of /Lab objects");
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_16(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_17(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_18(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_19(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_20(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_21(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_22(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_23(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_24(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_25(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    @org.junit.jupiter.params.ParameterizedTest
+    @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
+    public void testLAB_26(int param0) {
+        PDLab pdLab = new PDLab();
+        org.apache.pdfbox.cos.COSArray cosArray = ((org.apache.pdfbox.cos.COSArray) (pdLab.getCOSObject()));
+        org.apache.pdfbox.cos.COSDictionary dict = ((org.apache.pdfbox.cos.COSDictionary) (cosArray.getObject(param0)));
+        // assertEquals("Lab", pdLab.getName());
+        // assertEquals(3, pdLab.getNumberOfComponents());
+        // assertNotNull(pdLab.getInitialColor());
+        // assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 0 }, pdLab.getInitialColor().getComponents()));
+        // assertEquals(0.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(0.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(1.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(-100.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(-100.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(100.0F, pdLab.getBRange().getMax(), 0.0);
+        // assertEquals("read operations should not change the size of /Lab objects", 0, dict.size());
+        dict.toString();
+        org.apache.pdfbox.pdmodel.common.PDRange pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(-1);
+        pdRange.setMax(2);
+        pdLab.setARange(pdRange);
+        pdRange = new org.apache.pdfbox.pdmodel.common.PDRange();
+        pdRange.setMin(3);
+        pdRange.setMax(4);
+        pdLab.setBRange(pdRange);
+        // assertEquals(-1.0F, pdLab.getARange().getMin(), 0.0);
+        // assertEquals(2.0F, pdLab.getARange().getMax(), 0.0);
+        // assertEquals(3.0F, pdLab.getBRange().getMin(), 0.0);
+        // assertEquals(4.0F, pdLab.getBRange().getMax(), 0.0);
+        PDTristimulus pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(5);
+        pdTristimulus.setY(6);
+        pdTristimulus.setZ(7);
+        pdLab.setWhitePoint(pdTristimulus);
+        pdTristimulus = new PDTristimulus();
+        pdTristimulus.setX(8);
+        pdTristimulus.setY(9);
+        pdTristimulus.setZ(10);
+        pdLab.setBlackPoint(pdTristimulus);
+        // assertEquals(5.0F, pdLab.getWhitepoint().getX(), 0.0);
+        // assertEquals(6.0F, pdLab.getWhitepoint().getY(), 0.0);
+        // assertEquals(7.0F, pdLab.getWhitepoint().getZ(), 0.0);
+        // assertEquals(8.0F, pdLab.getBlackPoint().getX(), 0.0);
+        // assertEquals(9.0F, pdLab.getBlackPoint().getY(), 0.0);
+        // assertEquals(10.0F, pdLab.getBlackPoint().getZ(), 0.0);
+        assertTrue(java.util.Arrays.equals(new float[]{ 0, 0, 3 }, pdLab.getInitialColor().getComponents()));
+    }
+
+    private static java.util.stream.Stream<org.junit.jupiter.params.provider.Arguments> provideProzeArguments() {
+        return java.util.stream.Stream.of(
+        org.junit.jupiter.params.provider.Arguments.of(0),
+        org.junit.jupiter.params.provider.Arguments.of(1),
+        org.junit.jupiter.params.provider.Arguments.of(10),
+        org.junit.jupiter.params.provider.Arguments.of(100),
+        org.junit.jupiter.params.provider.Arguments.of(101),
+        org.junit.jupiter.params.provider.Arguments.of(102),
+        org.junit.jupiter.params.provider.Arguments.of(103),
+        org.junit.jupiter.params.provider.Arguments.of(104),
+        org.junit.jupiter.params.provider.Arguments.of(105),
+        org.junit.jupiter.params.provider.Arguments.of(106),
+        org.junit.jupiter.params.provider.Arguments.of(107),
+        org.junit.jupiter.params.provider.Arguments.of(108),
+        org.junit.jupiter.params.provider.Arguments.of(109),
+        org.junit.jupiter.params.provider.Arguments.of(11),
+        org.junit.jupiter.params.provider.Arguments.of(110),
+        org.junit.jupiter.params.provider.Arguments.of(111),
+        org.junit.jupiter.params.provider.Arguments.of(112),
+        org.junit.jupiter.params.provider.Arguments.of(113),
+        org.junit.jupiter.params.provider.Arguments.of(114),
+        org.junit.jupiter.params.provider.Arguments.of(115),
+        org.junit.jupiter.params.provider.Arguments.of(116),
+        org.junit.jupiter.params.provider.Arguments.of(117),
+        org.junit.jupiter.params.provider.Arguments.of(118),
+        org.junit.jupiter.params.provider.Arguments.of(119),
+        org.junit.jupiter.params.provider.Arguments.of(12),
+        org.junit.jupiter.params.provider.Arguments.of(120),
+        org.junit.jupiter.params.provider.Arguments.of(121),
+        org.junit.jupiter.params.provider.Arguments.of(122),
+        org.junit.jupiter.params.provider.Arguments.of(123),
+        org.junit.jupiter.params.provider.Arguments.of(124),
+        org.junit.jupiter.params.provider.Arguments.of(125),
+        org.junit.jupiter.params.provider.Arguments.of(126),
+        org.junit.jupiter.params.provider.Arguments.of(127),
+        org.junit.jupiter.params.provider.Arguments.of(128),
+        org.junit.jupiter.params.provider.Arguments.of(129),
+        org.junit.jupiter.params.provider.Arguments.of(13),
+        org.junit.jupiter.params.provider.Arguments.of(130),
+        org.junit.jupiter.params.provider.Arguments.of(131),
+        org.junit.jupiter.params.provider.Arguments.of(132),
+        org.junit.jupiter.params.provider.Arguments.of(133),
+        org.junit.jupiter.params.provider.Arguments.of(134),
+        org.junit.jupiter.params.provider.Arguments.of(135),
+        org.junit.jupiter.params.provider.Arguments.of(136),
+        org.junit.jupiter.params.provider.Arguments.of(137),
+        org.junit.jupiter.params.provider.Arguments.of(138),
+        org.junit.jupiter.params.provider.Arguments.of(139),
+        org.junit.jupiter.params.provider.Arguments.of(14),
+        org.junit.jupiter.params.provider.Arguments.of(140),
+        org.junit.jupiter.params.provider.Arguments.of(141),
+        org.junit.jupiter.params.provider.Arguments.of(142),
+        org.junit.jupiter.params.provider.Arguments.of(143),
+        org.junit.jupiter.params.provider.Arguments.of(144),
+        org.junit.jupiter.params.provider.Arguments.of(15),
+        org.junit.jupiter.params.provider.Arguments.of(16),
+        org.junit.jupiter.params.provider.Arguments.of(17),
+        org.junit.jupiter.params.provider.Arguments.of(18),
+        org.junit.jupiter.params.provider.Arguments.of(19),
+        org.junit.jupiter.params.provider.Arguments.of(2),
+        org.junit.jupiter.params.provider.Arguments.of(20),
+        org.junit.jupiter.params.provider.Arguments.of(21),
+        org.junit.jupiter.params.provider.Arguments.of(22),
+        org.junit.jupiter.params.provider.Arguments.of(23),
+        org.junit.jupiter.params.provider.Arguments.of(24),
+        org.junit.jupiter.params.provider.Arguments.of(25),
+        org.junit.jupiter.params.provider.Arguments.of(26),
+        org.junit.jupiter.params.provider.Arguments.of(27),
+        org.junit.jupiter.params.provider.Arguments.of(28),
+        org.junit.jupiter.params.provider.Arguments.of(29),
+        org.junit.jupiter.params.provider.Arguments.of(3),
+        org.junit.jupiter.params.provider.Arguments.of(30),
+        org.junit.jupiter.params.provider.Arguments.of(31),
+        org.junit.jupiter.params.provider.Arguments.of(32),
+        org.junit.jupiter.params.provider.Arguments.of(33),
+        org.junit.jupiter.params.provider.Arguments.of(34),
+        org.junit.jupiter.params.provider.Arguments.of(35),
+        org.junit.jupiter.params.provider.Arguments.of(36),
+        org.junit.jupiter.params.provider.Arguments.of(37),
+        org.junit.jupiter.params.provider.Arguments.of(38),
+        org.junit.jupiter.params.provider.Arguments.of(39),
+        org.junit.jupiter.params.provider.Arguments.of(4),
+        org.junit.jupiter.params.provider.Arguments.of(40),
+        org.junit.jupiter.params.provider.Arguments.of(41),
+        org.junit.jupiter.params.provider.Arguments.of(42),
+        org.junit.jupiter.params.provider.Arguments.of(43),
+        org.junit.jupiter.params.provider.Arguments.of(44),
+        org.junit.jupiter.params.provider.Arguments.of(45),
+        org.junit.jupiter.params.provider.Arguments.of(46),
+        org.junit.jupiter.params.provider.Arguments.of(47),
+        org.junit.jupiter.params.provider.Arguments.of(48),
+        org.junit.jupiter.params.provider.Arguments.of(49),
+        org.junit.jupiter.params.provider.Arguments.of(5),
+        org.junit.jupiter.params.provider.Arguments.of(50),
+        org.junit.jupiter.params.provider.Arguments.of(51),
+        org.junit.jupiter.params.provider.Arguments.of(52),
+        org.junit.jupiter.params.provider.Arguments.of(53),
+        org.junit.jupiter.params.provider.Arguments.of(54),
+        org.junit.jupiter.params.provider.Arguments.of(55),
+        org.junit.jupiter.params.provider.Arguments.of(56),
+        org.junit.jupiter.params.provider.Arguments.of(57),
+        org.junit.jupiter.params.provider.Arguments.of(58),
+        org.junit.jupiter.params.provider.Arguments.of(59),
+        org.junit.jupiter.params.provider.Arguments.of(6),
+        org.junit.jupiter.params.provider.Arguments.of(60),
+        org.junit.jupiter.params.provider.Arguments.of(61),
+        org.junit.jupiter.params.provider.Arguments.of(62),
+        org.junit.jupiter.params.provider.Arguments.of(63),
+        org.junit.jupiter.params.provider.Arguments.of(64),
+        org.junit.jupiter.params.provider.Arguments.of(65),
+        org.junit.jupiter.params.provider.Arguments.of(66),
+        org.junit.jupiter.params.provider.Arguments.of(67),
+        org.junit.jupiter.params.provider.Arguments.of(68),
+        org.junit.jupiter.params.provider.Arguments.of(69),
+        org.junit.jupiter.params.provider.Arguments.of(7),
+        org.junit.jupiter.params.provider.Arguments.of(70),
+        org.junit.jupiter.params.provider.Arguments.of(71),
+        org.junit.jupiter.params.provider.Arguments.of(72),
+        org.junit.jupiter.params.provider.Arguments.of(73),
+        org.junit.jupiter.params.provider.Arguments.of(74),
+        org.junit.jupiter.params.provider.Arguments.of(75),
+        org.junit.jupiter.params.provider.Arguments.of(76),
+        org.junit.jupiter.params.provider.Arguments.of(77),
+        org.junit.jupiter.params.provider.Arguments.of(78),
+        org.junit.jupiter.params.provider.Arguments.of(79),
+        org.junit.jupiter.params.provider.Arguments.of(8),
+        org.junit.jupiter.params.provider.Arguments.of(80),
+        org.junit.jupiter.params.provider.Arguments.of(81),
+        org.junit.jupiter.params.provider.Arguments.of(82),
+        org.junit.jupiter.params.provider.Arguments.of(83),
+        org.junit.jupiter.params.provider.Arguments.of(84),
+        org.junit.jupiter.params.provider.Arguments.of(85),
+        org.junit.jupiter.params.provider.Arguments.of(86),
+        org.junit.jupiter.params.provider.Arguments.of(87),
+        org.junit.jupiter.params.provider.Arguments.of(88),
+        org.junit.jupiter.params.provider.Arguments.of(89),
+        org.junit.jupiter.params.provider.Arguments.of(9),
+        org.junit.jupiter.params.provider.Arguments.of(90),
+        org.junit.jupiter.params.provider.Arguments.of(91),
+        org.junit.jupiter.params.provider.Arguments.of(92),
+        org.junit.jupiter.params.provider.Arguments.of(93),
+        org.junit.jupiter.params.provider.Arguments.of(94),
+        org.junit.jupiter.params.provider.Arguments.of(95),
+        org.junit.jupiter.params.provider.Arguments.of(96),
+        org.junit.jupiter.params.provider.Arguments.of(97),
+        org.junit.jupiter.params.provider.Arguments.of(98),
+        org.junit.jupiter.params.provider.Arguments.of(99)
+        );
+    }
+}

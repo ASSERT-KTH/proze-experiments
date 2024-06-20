@@ -48,15 +48,6 @@ public class TestProzeGen_PDDocument_save_java_lang_String_TestCreateSimpleForms
         doc2.close();
     }
 
-    private org.apache.pdfbox.pdmodel.font.PDFont getFontFromWidgetResources(org.apache.pdfbox.pdmodel.interactive.form.PDTextField textBox, String fontResourceName) throws java.io.IOException {
-        org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationWidget widget = textBox.getWidgets().get(0);
-        org.apache.pdfbox.pdmodel.interactive.annotation.PDAppearanceDictionary appearance = widget.getAppearance();
-        org.apache.pdfbox.pdmodel.interactive.annotation.PDAppearanceEntry normalAppearance = appearance.getNormalAppearance();
-        org.apache.pdfbox.pdmodel.interactive.annotation.PDAppearanceStream appearanceStream = normalAppearance.getAppearanceStream();
-        org.apache.pdfbox.pdmodel.PDResources resources = appearanceStream.getResources();
-        return resources.getFont(org.apache.pdfbox.cos.COSName.getPDFName(fontResourceName));
-    }
-
     @org.junit.jupiter.params.ParameterizedTest
     @org.junit.jupiter.params.provider.MethodSource("provideProzeArguments")
     public void testCreateCheckBox_1(String param0) throws java.io.IOException {

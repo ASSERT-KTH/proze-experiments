@@ -22,7 +22,13 @@
  */
 package org.apache.pdfbox.preflight.metadata;
 
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDDocumentInformation;
+import org.apache.pdfbox.preflight.ValidationResult;
+import org.apache.xmpbox.XMPMetadata;
 import org.junit.jupiter.params.provider.NullSource;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -60,7 +66,7 @@ public class TestProzeGen_DateConverter_toCalendar_java_lang_String_pdf_TestSync
 
     @org.junit.jupiter.api.BeforeAll
     public static void initSynchronizedMetadataValidation() {
-        TestProzeGen_DateConverter_toCalendar_java_lang_String_pdf_TestSynchronizedMetadataValidation_testPDFBox4292.sync = new SynchronizedMetaDataValidation();
+        sync = new SynchronizedMetaDataValidation();
     }
 
     @org.junit.jupiter.api.BeforeEach
@@ -90,8 +96,8 @@ public class TestProzeGen_DateConverter_toCalendar_java_lang_String_pdf_TestSync
         xmp.setModifyDate(cal2);
         // Launching synchronization test
         try {
-            ve = TestProzeGen_DateConverter_toCalendar_java_lang_String_pdf_TestSynchronizedMetadataValidation_testPDFBox4292.sync.validateMetadataSynchronization(doc, metadata);
-            // Test unsychronized value
+            ve = sync.validateMetadataSynchronization(doc, metadata);
+            // Test unsynchronized value
             assertEquals(0, ve.size());
         } catch (org.apache.pdfbox.preflight.exception.ValidationException e) {
             throw new Exception(e.getMessage());
