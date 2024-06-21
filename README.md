@@ -1,5 +1,5 @@
 # proze-experiments
-Data and scripts for experiments with [proze](https://github.com/ASSERT-KTH/proze)
+Data and scripts for experiments with **proze**
 
 ## Notes for experiments:
 It can be useful to work with two copies of a target project:
